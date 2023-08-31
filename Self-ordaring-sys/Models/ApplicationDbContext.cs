@@ -18,6 +18,7 @@ namespace Self_ordaring_sys.Models
             addingItems(builder);
         }
         
+        DbSet<Order>Orders { get; set; }
        private void seedRules (ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<IdentityRole>().HasData(
