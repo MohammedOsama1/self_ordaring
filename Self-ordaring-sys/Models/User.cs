@@ -4,8 +4,6 @@ namespace Self_ordaring_sys.Models
 {
     public class User 
     {
-        [Key]
-        public int Id { get; set; }
 
         [Required(ErrorMessage = "Please Enter Your Full Name"),MinLength(10)]
         public string UserName { get; set; }
@@ -29,7 +27,7 @@ namespace Self_ordaring_sys.Models
         public string Address { get; set; } 
 
         [Required(ErrorMessage = "Please Enter Your Address"), MinLength(11)]
-        public int Phone { get; set; }
+        public string Phone { get; set; }
         
     }
 }
