@@ -5,11 +5,11 @@ namespace Self_ordaring_sys.Models
     public class User 
     {
 
-        [Required(ErrorMessage = "Please Enter Your Full Name"),MinLength(10)]
+        [Required(ErrorMessage = "Please Enter Your Full Name")]
         public string UserName { get; set; }
 
 
-        [Required(ErrorMessage = "Please Enter Your Full Name"), MinLength(10)]
+        [Required(ErrorMessage = "Please Enter Your Full Names"), MinLength(10)]
         public string Name { get; set; }
 
 

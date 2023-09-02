@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using Self_ordaring_sys.Models;
+using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using System.Security.Claims;
+using System.Text;
 
 namespace Self_ordaring_sys.Controlllers
 {
@@ -20,7 +23,7 @@ namespace Self_ordaring_sys.Controlllers
 
         [HttpPost("Register")]
 
-        public async Task<IActionResult> registerMethod (User userModel) {
+        public async Task<IActionResult> registerMethod ([FromForm]User userModel) {
         
             var user = await _userManager.FindByEmailAsync (userModel.Email);
 
@@ -53,6 +56,49 @@ namespace Self_ordaring_sys.Controlllers
 
             return BadRequest(request.Errors);
         
+        }
+
+
+        [HttpPost("Login")]
+
+        public async Task<IActionResult> loginMethod([FromForm] Login _login)
+        {
+
+            var user = await _userManager.FindByEmailAsync(_login.Email);
+            if (user == null && await _userManager.CheckPasswordAsync(user,_login.Password))
+            {
+                return BadRequest(new { msg = "Account not found please register" });
+            }
+
+            var claims = new List<Claim>() {
+            new Claim(ClaimTypes.Name, user.UserName),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())};
+
+            var role = await _userManager.GetRolesAsync(user);
+            Claim clai = new (ClaimTypes.Role, role[0]);
+            claims.Add(clai);
+            var jwtToken = getToken(claims);
+            return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(jwtToken) , userType = role });
+
+
+
+
+
+        }
+
+        private JwtSecurityToken getToken(List<Claim>claims) {
+
+            var auth = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("oooooooooooooooooo"));
+
+            var token = new JwtSecurityToken(
+                issuer:"",
+                audience:"",
+                expires:DateTime.Now.AddDays(1),
+                claims:claims,
+                signingCredentials : new SigningCredentials(auth,SecurityAlgorithms.HmacSha256)
+                );
+
+            return token;
         }
     }
 }
