@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Self_ordaring_sys.Models;
 
@@ -11,9 +12,11 @@ using Self_ordaring_sys.Models;
 namespace Self_ordaring_sys.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230930140550_dwdfe")]
+    partial class dwdfe
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,14 +54,14 @@ namespace Self_ordaring_sys.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "881ccc9b-b69b-4d6c-862f-bacace1e30b5",
+                            Id = "aeae55b8-326d-40a9-b456-55017b5c7b2c",
                             ConcurrencyStamp = "1",
                             Name = "User",
                             NormalizedName = "User"
                         },
                         new
                         {
-                            Id = "3ea87222-7378-47bc-836e-7f145fc21e95",
+                            Id = "edd35a9a-8cbd-48d8-818a-a5ad35dcf82c",
                             ConcurrencyStamp = "2",
                             Name = "Admin",
                             NormalizedName = "Admin"

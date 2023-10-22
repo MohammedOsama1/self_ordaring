@@ -20,4 +20,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Self.Core\Self.Core.csproj" />
+    <ProjectReference Include="..\Self.EF\Self.EF.csproj" />
+  </ItemGroup>
+
 </Project>

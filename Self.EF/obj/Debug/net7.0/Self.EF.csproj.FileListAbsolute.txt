@@ -1,0 +1,17 @@
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\obj\Debug\net7.0\Self.EF.csproj.AssemblyReference.cache
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\obj\Debug\net7.0\Self.EF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\obj\Debug\net7.0\Self.EF.AssemblyInfoInputs.cache
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\obj\Debug\net7.0\Self.EF.AssemblyInfo.cs
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\obj\Debug\net7.0\Self.EF.csproj.CoreCompileInputs.cache
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\bin\Debug\net7.0\Self.EF.deps.json
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\bin\Debug\net7.0\Self.EF.runtimeconfig.json
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\bin\Debug\net7.0\Self.EF.dll
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\bin\Debug\net7.0\Self.EF.pdb
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\bin\Debug\net7.0\Self.Core.dll
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\bin\Debug\net7.0\Self.Core.pdb
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\obj\Debug\net7.0\Self.EF.csproj.CopyComplete
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\obj\Debug\net7.0\Self.EF.dll
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\obj\Debug\net7.0\refint\Self.EF.dll
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\obj\Debug\net7.0\Self.EF.pdb
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\obj\Debug\net7.0\Self.EF.genruntimeconfig.cache
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.EF\obj\Debug\net7.0\ref\Self.EF.dll

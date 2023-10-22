@@ -1,0 +1,12 @@
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.Core\obj\Debug\net7.0\Self.Core.csproj.AssemblyReference.cache
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.Core\obj\Debug\net7.0\Self.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.Core\obj\Debug\net7.0\Self.Core.AssemblyInfoInputs.cache
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.Core\obj\Debug\net7.0\Self.Core.AssemblyInfo.cs
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.Core\obj\Debug\net7.0\Self.Core.csproj.CoreCompileInputs.cache
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.Core\bin\Debug\net7.0\Self.Core.deps.json
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.Core\bin\Debug\net7.0\Self.Core.dll
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.Core\bin\Debug\net7.0\Self.Core.pdb
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.Core\obj\Debug\net7.0\Self.Core.dll
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.Core\obj\Debug\net7.0\refint\Self.Core.dll
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.Core\obj\Debug\net7.0\Self.Core.pdb
+C:\Users\osama.MAHAM\source\repos\Self-ordaring-sys\Self.Core\obj\Debug\net7.0\ref\Self.Core.dll

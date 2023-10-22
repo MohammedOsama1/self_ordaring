@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿
+
+
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
 
 namespace Self_ordaring_sys.Models
 {
@@ -16,8 +18,9 @@ namespace Self_ordaring_sys.Models
             seedRules(builder);
             addingCategories(builder);
             addingItems(builder);
+
         }
-        
+
         DbSet<Order>Orders { get; set; }
        private void seedRules (ModelBuilder modelBuilder)
         {

@@ -1339,6 +1339,33 @@
             "rid": "win"
           }
         }
+      },
+      "Self.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Self.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Self.Core.dll": {}
+        }
+      },
+      "Self.EF/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.10",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.10",
+          "Microsoft.EntityFrameworkCore": "7.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10",
+          "Self.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Self.EF.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Self.EF.dll": {}
+        }
       }
     }
   },
@@ -4106,6 +4133,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Self.Core/1.0.0": {
+      "type": "project",
+      "path": "../Self.Core/Self.Core.csproj",
+      "msbuildProject": "../Self.Core/Self.Core.csproj"
+    },
+    "Self.EF/1.0.0": {
+      "type": "project",
+      "path": "../Self.EF/Self.EF.csproj",
+      "msbuildProject": "../Self.EF/Self.EF.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4116,6 +4153,8 @@
       "Microsoft.EntityFrameworkCore >= 7.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.10",
+      "Self.Core >= 1.0.0",
+      "Self.EF >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -4151,7 +4190,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\osama.MAHAM\\source\\repos\\Self-ordaring-sys\\Self.Core\\Self.Core.csproj": {
+              "projectPath": "C:\\Users\\osama.MAHAM\\source\\repos\\Self-ordaring-sys\\Self.Core\\Self.Core.csproj"
+            },
+            "C:\\Users\\osama.MAHAM\\source\\repos\\Self-ordaring-sys\\Self.EF\\Self.EF.csproj": {
+              "projectPath": "C:\\Users\\osama.MAHAM\\source\\repos\\Self-ordaring-sys\\Self.EF\\Self.EF.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

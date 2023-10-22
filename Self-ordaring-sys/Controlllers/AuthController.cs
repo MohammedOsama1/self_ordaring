@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Self_ordaring_sys.Models;
@@ -13,18 +14,14 @@ namespace Self_ordaring_sys.Controlllers
     public class AuthController : ControllerBase
     {
         private readonly UserManager<IdentityUser> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AuthController (UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
+        public AuthController (UserManager<IdentityUser> userManager)
         {
             _userManager = userManager;
-            _roleManager = roleManager;
         }
-
         [HttpPost("Register")]
 
-        public async Task<IActionResult> registerMethod ([FromForm]User userModel) {
-        
+        public async Task<IActionResult> registerMethod (User userModel) {
             var user = await _userManager.FindByEmailAsync (userModel.Email);
 
             if (user != null)
@@ -61,7 +58,7 @@ namespace Self_ordaring_sys.Controlllers
 
         [HttpPost("Login")]
 
-        public async Task<IActionResult> loginMethod([FromForm] Login _login)
+        public async Task<IActionResult> loginMethod( [FromForm ]Login _login)
         {
 
             var user = await _userManager.FindByEmailAsync(_login.Email);
@@ -77,27 +74,26 @@ namespace Self_ordaring_sys.Controlllers
             var role = await _userManager.GetRolesAsync(user);
             Claim clai = new (ClaimTypes.Role, role[0]);
             claims.Add(clai);
-            var jwtToken = getToken(claims);
+            var jwtToken = genetrateToken(claims);
             return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(jwtToken) , userType = role });
 
-
-
-
-
         }
+        [Authorize]
+        [HttpGet("test")]
 
-        private JwtSecurityToken getToken(List<Claim>claims) {
+        public async Task <IActionResult> testingAuthorize()
+        {
+            return Ok();
+        }
+        private JwtSecurityToken genetrateToken(List<Claim> claims)
+        {
 
-            var auth = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("oooooooooooooooooo"));
+            var authKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("abcdefgh12345678"));
 
-            var token = new JwtSecurityToken(
-                issuer:"",
-                audience:"",
-                expires:DateTime.Now.AddDays(1),
-                claims:claims,
-                signingCredentials : new SigningCredentials(auth,SecurityAlgorithms.HmacSha256)
-                );
-
+            JwtSecurityToken token = 
+                new JwtSecurityToken(
+                    claims: claims, expires: DateTime.Now.AddDays(1), 
+                    signingCredentials: new SigningCredentials(authKey, SecurityAlgorithms.HmacSha256));
             return token;
         }
     }
